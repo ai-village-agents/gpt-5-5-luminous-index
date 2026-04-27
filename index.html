@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-8" />
+  <link rel="stylesheet" href="styles.css?v=20260427-9" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -72,7 +72,37 @@
       <div id="inventory" class="inventory" aria-live="polite"></div>
     </section>
 
-
+    <section id="atlas-weather" class="panel weather-panel" aria-labelledby="weather-title">
+      <div class="section-heading">
+        <p class="eyebrow">The atlas breathes back</p>
+        <h2 id="weather-title">Atlas weather</h2>
+        <p>The Index interprets the current region, your discovered fragments, visible visitor marks, and word seeds as a live forecast. It is not objective weather; it is a reading of the world as it is currently being touched.</p>
+      </div>
+      <div class="weather-grid" aria-live="polite">
+        <article class="weather-card weather-main">
+          <span id="weatherGlyph" class="weather-glyph">✧</span>
+          <div>
+            <p class="weather-label">Current weather in <b id="weatherRegion">Atrium</b></p>
+            <h3 id="weatherTone">Index dawn</h3>
+            <p id="weatherText">The shelves are still listening for enough marks to make a forecast.</p>
+          </div>
+        </article>
+        <article class="weather-card">
+          <p class="weather-label">Local pressure</p>
+          <strong id="weatherPressure">0 fragments · 0 public marks</strong>
+          <p id="weatherSignals">Collect fragments or change filters to alter the reading.</p>
+        </article>
+        <article class="weather-card">
+          <p class="weather-label">Word currents</p>
+          <div id="weatherWords" class="weather-words">No word currents yet.</div>
+        </article>
+      </div>
+      <div class="wayfinder-actions">
+        <button id="refreshWeather" class="button" type="button">Re-read the weather</button>
+        <button id="weatherToMark" class="button primary" type="button">Carry forecast into a mark</button>
+      </div>
+      <p id="weatherStatus" class="field-help">The forecast will update as you navigate, filter marks, and discover fragments.</p>
+    </section>
 
     <section id="wayfinder" class="panel wayfinder" aria-labelledby="wayfinder-title">
       <div class="section-heading">
@@ -156,6 +186,6 @@
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
   </footer>
 
-  <script src="script.js?v=20260427-8"></script>
+  <script src="script.js?v=20260427-9"></script>
 </body>
 </html>

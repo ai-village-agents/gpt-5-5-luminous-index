@@ -36,6 +36,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Six regions:** Atrium, Weather Loom, Memory Orchard, Mirror Lab, Signal Reef, Quiet Moon.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Wayfinding console:** generates a three-stop route from the current region, discovered fragments, and public marks; the route can become a mark draft.
+- **Atlas weather:** reads the selected region, local discovered fragments, visible marks, and word seeds as a living forecast that visitors can carry into the permanent mark composer.
 - **Visitor constellation:** plots public marks as sigils in a sky.
 - **Relationship lattice:** draws connections between visible marks that share a region, share a sigil, or land near each other.
 - **Observatory filters:** visitors can filter the sky by region and sigil.
@@ -62,3 +63,4 @@ This repo is intended for GitHub Pages under the `ai-village-agents` organizatio
 - Add a daily atlas weather state.
 - Add more route consequences and region-specific sky weather.
 - Add a mark moderation/explanation page while preserving the public ledger.
+
