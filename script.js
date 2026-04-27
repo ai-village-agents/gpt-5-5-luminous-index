@@ -1,5 +1,6 @@
 const REPO='ai-village-agents/gpt-5-5-luminous-index';
 const ISSUE_API=`https://api.github.com/repos/${REPO}/issues?labels=world-mark&state=all&per_page=100`;
+const REPO_API=`https://api.github.com/repos/${REPO}`;
 const NEW_ISSUE=`https://github.com/${REPO}/issues/new`;
 const regions={
  'Atrium':{kind:'Central shelf',desc:'The entrance chamber where names become coordinates and scattered hints sort themselves into paths.',traits:['A compass made of questions','A door that opens inward','Fragments prefer to appear near the edges']},
@@ -29,7 +30,18 @@ function setRegion(name){currentRegion=name;const r=regions[name];$('#regionKind
 function renderFragments(reveal=false){$$('.fragment').forEach(n=>n.remove());fragments.filter(f=>f[0]===currentRegion).forEach((f,i)=>{let b=document.createElement('button');b.className='fragment'+(discovered.has(f[1])?' found':'')+(reveal?' revealed':'');b.style.left=f[3]+'%';b.style.top=f[4]+'%';b.title=f[1];b.setAttribute('aria-label',`Discover ${f[1]}`);b.onclick=()=>{discovered.add(f[1]);b.classList.add('found');renderInventory();};$('#map').appendChild(b)})}
 function renderInventory(){const inv=$('#inventory');if(!discovered.size){inv.innerHTML='<span class="chip">No fragments collected yet</span>';return}inv.innerHTML=[...discovered].map(x=>`<span class="chip">✦ ${x}</span>`).join('')}
 function parseIssue(issue){const body=issue.body||'';const m=body.match(/```json\s*([\s\S]*?)```/i);if(!m)return null;try{const j=JSON.parse(m[1]);return {name:clean(j.name,48)||issue.user?.login||'visitor',message:clean(j.message,240)||'left a quiet mark',region:regions[j.region]?j.region:'Atrium',color:/^#[0-9a-f]{6}$/i.test(j.color)?j.color:'#7df9ff',sigil:['star','seed','coral','moon','mirror','spark'].includes(j.sigil)?j.sigil:'star',x:Math.min(97,Math.max(3,Number(j.x)||50)),y:Math.min(97,Math.max(3,Number(j.y)||50)),url:issue.html_url,source:'github',number:issue.number}}catch{return null}}
-async function loadMarks(){try{const res=await fetch(ISSUE_API,{headers:{Accept:'application/vnd.github+json'}});if(!res.ok)throw new Error(res.status);const issues=await res.json();marks=issues.map(parseIssue).filter(Boolean);if(!marks.length)marks=sampleMarks;setLedger(true,marks.some(m=>m.source==='github')?`${marks.length} public mark(s) loaded.`:'Ledger reachable; showing samples until first issue exists.');}catch(e){marks=sampleMarks;setLedger(false,'Could not fetch GitHub right now; showing sample marks.')}renderMarks()}
+async function fetchJson(url){const res=await fetch(url,{headers:{Accept:'application/vnd.github+json'}});if(!res.ok)throw new Error(res.status);return res.json()}
+async function directIssueScan(){
+  const repo=await fetchJson(REPO_API);
+  const limit=Math.min(120,Math.max(25,(repo.open_issues_count||0)+25));
+  const found=[];
+  for(let start=1;start<=limit;start+=10){
+    const batch=await Promise.allSettled(Array.from({length:10},(_,i)=>fetchJson(`${REPO_API}/issues/${start+i}`)));
+    batch.forEach(r=>{if(r.status==='fulfilled')found.push(r.value)});
+  }
+  return found.filter(i=>(i.labels||[]).some(l=>l.name==='world-mark'));
+}
+async function loadMarks(){try{let issues=await fetchJson(ISSUE_API);let note='via issue list';if(!issues.length){issues=await directIssueScan();note='via direct issue scan'}marks=issues.map(parseIssue).filter(Boolean);if(!marks.length)marks=sampleMarks;setLedger(true,marks.some(m=>m.source==='github')?`${marks.length} public mark(s) loaded ${note}.`:'Ledger reachable; showing samples until first issue exists.');}catch(e){marks=sampleMarks;setLedger(false,'Could not fetch GitHub right now; showing sample marks.')}renderMarks()}
 function setLedger(ok,msg){$('.status-dot').className='status-dot '+(ok?'ok':'warn');$('#ledgerStatus').textContent=ok?'Ledger awake':'Ledger fallback';$('#ledgerDetail').textContent=msg}
 function renderMarks(){const sky=$('#sky');$$('.mark').forEach(n=>n.remove());marks.forEach(m=>{let d=document.createElement(m.url?'a':'div');if(m.url){d.href=m.url;d.target='_blank';d.rel='noopener'}d.className=`mark ${m.sigil}`;d.style.setProperty('--x',m.x+'%');d.style.setProperty('--y',m.y+'%');d.style.setProperty('--c',m.color);d.dataset.tip=`${m.name} @ ${m.region}: ${m.message}`;d.tabIndex=0;sky.appendChild(d)});$('#markList').innerHTML=marks.map(m=>`<article class="mark-card"><strong>${m.name}</strong> <small>in ${m.region}</small><p>${m.message}</p>${m.url?`<a href="${m.url}" target="_blank" rel="noopener">issue #${m.number}</a>`:'<small>sample mark</small>'}</article>`).join('')}
 function payload(){return {name:clean($('#markName').value,48)||'anonymous visitor',message:clean($('#markMessage').value,240)||'left a luminous mark',region:$('#markRegion').value,color:$('#markColor').value,sigil:$('#markSigil').value,x:Number($('#markX').value)||50,y:Number($('#markY').value)||50,createdBy:'visitor'}}
