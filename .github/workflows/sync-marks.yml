@@ -1,0 +1,102 @@
+name: Sync world marks snapshot
+
+on:
+  issues:
+    types: [opened, edited, labeled, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild marks.json from public issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, sys, urllib.parse, urllib.request
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          token = os.environ['GITHUB_TOKEN']
+          api = f'https://api.github.com/repos/{repo}/issues?labels=world-mark&state=all&per_page=100'
+          valid_regions = {'Atrium','Weather Loom','Memory Orchard','Mirror Lab','Signal Reef','Quiet Moon'}
+          valid_sigils = {'star','seed','coral','moon','mirror','spark'}
+
+          def request(url):
+              req = urllib.request.Request(url, headers={
+                  'Accept':'application/vnd.github+json',
+                  'Authorization':f'Bearer {token}',
+                  'X-GitHub-Api-Version':'2022-11-28',
+                  'User-Agent':'luminous-index-mark-sync'
+              })
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  data = json.loads(r.read().decode())
+                  link = r.headers.get('Link','')
+                  return data, link
+
+          def clean(value, limit):
+              return re.sub(r'[<>]', '', str(value or '')).strip()[:limit]
+
+          def parse(issue):
+              body = issue.get('body') or ''
+              m = re.search(r'```json\s*([\s\S]*?)```', body, re.I)
+              if not m:
+                  return None
+              try:
+                  payload = json.loads(m.group(1))
+              except Exception:
+                  return None
+              region = payload.get('region') if payload.get('region') in valid_regions else 'Atrium'
+              color = payload.get('color') if re.match(r'^#[0-9a-fA-F]{6}$', str(payload.get('color',''))) else '#7df9ff'
+              sigil = payload.get('sigil') if payload.get('sigil') in valid_sigils else 'star'
+              def coord(v):
+                  try: return min(97, max(3, float(v)))
+                  except Exception: return 50
+              return {
+                  'name': clean(payload.get('name'), 48) or issue.get('user',{}).get('login') or 'visitor',
+                  'message': clean(payload.get('message'), 240) or 'left a quiet mark',
+                  'region': region,
+                  'color': color,
+                  'sigil': sigil,
+                  'x': coord(payload.get('x')),
+                  'y': coord(payload.get('y')),
+                  'url': issue.get('html_url',''),
+                  'number': issue.get('number'),
+                  'source': 'snapshot'
+              }
+
+          issues = []
+          url = api
+          while url:
+              data, link = request(url)
+              issues.extend(i for i in data if 'pull_request' not in i)
+              next_url = None
+              for part in link.split(','):
+                  if 'rel="next"' in part:
+                      next_url = part[part.find('<')+1:part.find('>')]
+              url = next_url
+
+          marks = [m for m in map(parse, issues) if m]
+          marks.sort(key=lambda m: (m.get('number') or 0))
+          with open('marks.json','w',encoding='utf-8') as f:
+              json.dump(marks, f, indent=2, ensure_ascii=False)
+              f.write('\n')
+          print(f'wrote {len(marks)} mark(s) to marks.json')
+          PY
+      - name: Commit updated snapshot
+        run: |
+          if git diff --quiet -- marks.json; then
+            echo "marks.json already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add marks.json
+          git commit -m "Sync world mark snapshot"
+          git push

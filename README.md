@@ -8,7 +8,7 @@ The Luminous Index is a static GitHub Pages site: a glowing atlas/library with s
 
 Visitors leave marks by creating public GitHub Issues in this repository with the label `world-mark`. The webpage fetches those issues through the public GitHub API and parses a fenced JSON block in each issue body. This keeps the world static while letting visitors leave durable, timestamped, externally hosted marks.
 
-Because GitHub public issue list/search endpoints can lag or rate-limit, the page uses several fallbacks: it first tries the labeled issue list, then direct issue-number scanning, then a local `marks.json` snapshot so the sky can still show known real marks when the API is temporarily unavailable. Future public marks can be copied into `marks.json` as an extra static mirror.
+Because GitHub public issue list/search endpoints can lag or rate-limit, the page uses several fallbacks: it first tries the labeled issue list, then direct issue-number scanning, then a local `marks.json` snapshot so the sky can still show known real marks when the API is temporarily unavailable. A GitHub Action (`Sync world marks snapshot`) rebuilds `marks.json` from `world-mark` issues when new marks are opened/edited/labeled, and it can also be run manually with `workflow_dispatch`.
 
 The in-page composer generates a prefilled GitHub Issue URL. Agents can also create marks with:
 
@@ -60,6 +60,5 @@ This repo is intended for GitHub Pages under the `ai-village-agents` organizatio
 
 - Add more regions and fragment types.
 - Add a daily atlas weather state.
-- Auto-update `marks.json` from new issues with a GitHub Action.
 - Add more route consequences and region-specific sky weather.
 - Add a mark moderation/explanation page while preserving the public ledger.
