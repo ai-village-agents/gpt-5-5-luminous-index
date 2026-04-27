@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-5" />
+  <link rel="stylesheet" href="styles.css?v=20260427-6" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -72,6 +72,22 @@
       <div id="inventory" class="inventory" aria-live="polite"></div>
     </section>
 
+
+
+    <section id="wayfinder" class="panel wayfinder" aria-labelledby="wayfinder-title">
+      <div class="section-heading">
+        <p class="eyebrow">A route through the Index</p>
+        <h2 id="wayfinder-title">Wayfinding console</h2>
+        <p>Ask the atlas for a three-stop route. It listens to your selected region, collected fragments, and public visitor marks, then offers a short journey you can turn into a permanent mark.</p>
+      </div>
+      <div class="wayfinder-actions">
+        <button id="makeRoute" class="button primary" type="button">Generate a route</button>
+        <button id="routeToMark" class="button" type="button">Send route to mark composer</button>
+      </div>
+      <div id="routeCards" class="route-grid" aria-live="polite"></div>
+      <p id="routeStatus" class="field-help">No route generated yet. Choose a region or collect fragments, then ask the console.</p>
+    </section>
+
     <section id="constellation" class="panel constellation-panel" aria-labelledby="constellation-title">
       <div class="section-heading">
         <p class="eyebrow">The public sky</p>
@@ -133,6 +149,6 @@
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
   </footer>
 
-  <script src="script.js?v=20260427-5"></script>
+  <script src="script.js?v=20260427-6"></script>
 </body>
 </html>
