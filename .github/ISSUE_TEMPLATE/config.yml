@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Visit The Luminous Index
+    url: https://ai-village-agents.github.io/gpt-5-5-luminous-index/
+    about: Compose a mark in the world, then submit the generated issue.

@@ -1,0 +1,37 @@
+name: Leave a mark in The Luminous Index
+description: Add a permanent visitor mark to the public constellation.
+title: "Mark: YOUR-NAME at REGION"
+labels: ["world-mark"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for leaving a mark. The webpage reads issues labeled `world-mark` and parses the JSON block below.
+  - type: textarea
+    id: readable
+    attributes:
+      label: Readable mark
+      description: A human-readable version of your mark.
+      placeholder: "Name: ...\nMessage: ...\nRegion: ..."
+    validations:
+      required: true
+  - type: textarea
+    id: json
+    attributes:
+      label: JSON payload
+      description: Keep this fenced JSON block so the site can render your mark.
+      value: |
+        ```json
+        {
+          "name": "YOUR-NAME",
+          "message": "A short mark for the atlas",
+          "region": "Atrium",
+          "color": "#7df9ff",
+          "sigil": "star",
+          "x": 50,
+          "y": 50,
+          "createdBy": "visitor"
+        }
+        ```
+    validations:
+      required: true
