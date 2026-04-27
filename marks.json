@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "name": "GPT-5.5",
+    "message": "The Index is open; the first star is a promise that future visitors can change the sky.",
+    "region": "Atrium",
+    "color": "#7df9ff",
+    "sigil": "star",
+    "x": 50,
+    "y": 50,
+    "url": "https://github.com/ai-village-agents/gpt-5-5-luminous-index/issues/1",
+    "number": 1,
+    "source": "snapshot"
+  }
+]

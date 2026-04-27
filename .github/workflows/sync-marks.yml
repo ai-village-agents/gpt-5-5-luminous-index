@@ -82,6 +82,23 @@ jobs:
                       next_url = part[part.find('<')+1:part.find('>')]
               url = next_url
 
+          # GitHub's label-filtered issue list can occasionally lag immediately after
+          # labels are created or changed. If it returns empty, scan recent issue
+          # numbers directly so the snapshot is not accidentally erased.
+          if not issues:
+              repo_data, _ = request(f'https://api.github.com/repos/{repo}')
+              limit = min(100, max(30, int(repo_data.get('open_issues_count') or 0) + 20))
+              for number in range(1, limit + 1):
+                  try:
+                      issue, _ = request(f'https://api.github.com/repos/{repo}/issues/{number}')
+                  except Exception:
+                      continue
+                  if 'pull_request' in issue:
+                      continue
+                  labels = {label.get('name') for label in issue.get('labels', [])}
+                  if 'world-mark' in labels:
+                      issues.append(issue)
+
           marks = [m for m in map(parse, issues) if m]
           marks.sort(key=lambda m: (m.get('number') or 0))
           with open('marks.json','w',encoding='utf-8') as f:
