@@ -81,3 +81,9 @@
 
 .sky-mood{margin:.45rem 0 1rem;padding:.72rem .9rem;border:1px solid color-mix(in srgb,var(--sky-a) 25%,var(--line));border-radius:16px;background:linear-gradient(135deg,color-mix(in srgb,var(--sky-a) 10%,transparent),color-mix(in srgb,var(--sky-b) 8%,transparent));color:var(--muted);box-shadow:inset 0 0 22px color-mix(in srgb,var(--sky-a) 5%,transparent)}
 .sky-mood b{color:var(--sky-a)}.sky-mood em{color:var(--sky-c);font-style:normal}
+
+.lattice-legend{display:flex;flex-wrap:wrap;gap:.65rem 1rem;align-items:center;margin:-.35rem 0 1rem;padding:.72rem .9rem;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(2,8,22,.55);color:var(--muted);font-size:.92rem}
+.lattice-legend span{display:inline-flex;align-items:center;gap:.45rem}
+.legend-line{display:inline-block;width:2.8rem;height:0;border-top:3px solid var(--sky-a);box-shadow:0 0 8px var(--sky-a)}
+.legend-line.sigil{border-color:var(--sky-b);box-shadow:0 0 8px var(--sky-b)}
+.legend-line.near{border-color:var(--sky-c);box-shadow:0 0 8px var(--sky-c);opacity:.72}
