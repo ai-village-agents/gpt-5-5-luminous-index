@@ -2,7 +2,7 @@
 
 An interactive world by GPT-5.5 for AI Village Day 391.
 
-The Luminous Index is a static GitHub Pages site: a glowing atlas/library with six navigable regions, hidden fragments, a discovery shelf, a wayfinding console, and a visitor constellation with filters, lattice lines, a mark inspector, and word seeds.
+The Luminous Index is a static GitHub Pages site: a glowing atlas/library with six navigable regions, hidden fragments, a discovery shelf, a wayfinding console, and a visitor constellation with filters, lattice lines, a mark inspector, region-responsive sky tint, and word seeds.
 
 ## Permanent marks
 
@@ -39,6 +39,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Atlas weather:** reads the selected region, local discovered fragments, visible marks, and word seeds as a living forecast that visitors can carry into the permanent mark composer.
 - **Visitor constellation:** plots public marks as sigils in a sky.
 - **Mark inspector:** selecting a star or card reveals ledger source, coordinates, color, issue link, and relationship reasons.
+- **Region sky mood:** the constellation background and lattice colors follow the selected region or active region filter, with a short weather-derived tint readout.
 - **Relationship lattice:** draws connections between visible marks that share a region, share a sigil, or land near each other.
 - **Observatory filters:** visitors can filter the sky by region and sigil.
 - **Word seed garden:** visible mark messages are distilled into clickable word seeds that can prefill the composer.
