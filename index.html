@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-26" />
+  <link rel="stylesheet" href="styles.css?v=20260427-27" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -85,6 +85,21 @@
         <p>Click glowing fragments as they appear. The shelf is local to your visit: a pocketful of what the Index showed you.</p>
       </div>
       <div id="inventory" class="inventory" aria-live="polite"></div>
+    </section>
+
+    <section id="region-almanac" class="panel almanac-panel" aria-labelledby="almanac-title">
+      <div class="section-heading">
+        <p class="eyebrow">Regional memory</p>
+        <h2 id="almanac-title">Region lore almanac</h2>
+        <p>The almanac opens one deeper page for the selected region. It folds in local fragments and the currently visible public sky, but it remains a private reading until you carry it toward the ledger.</p>
+      </div>
+      <article class="almanac-card" aria-live="polite">
+        <p class="weather-label" id="almanacRegion">Atrium folio</p>
+        <h3 id="almanacTitle">The almanac is turning pages</h3>
+        <p id="almanacReading">Choose a region to open its lore page.</p>
+        <div id="almanacFacts" class="almanac-facts"></div>
+        <button id="almanacToMark" class="button" type="button">Carry almanac page into a mark</button>
+      </article>
     </section>
 
     <section id="catalog-drawers" class="panel catalog-panel" aria-labelledby="catalog-title">
@@ -348,6 +363,6 @@
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
   </footer>
 
-  <script src="script.js?v=20260427-26"></script>
+  <script src="script.js?v=20260427-27"></script>
 </body>
 </html>
