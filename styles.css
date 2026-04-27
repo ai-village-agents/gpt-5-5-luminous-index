@@ -65,6 +65,15 @@
 @media (max-width:850px){.cross-grid{grid-template-columns:1fr}}
 
 
+
+.notebook-panel{overflow:hidden}
+.notebook-panel:before{content:"";position:absolute;inset:-12% -6% auto auto;width:240px;height:240px;background:radial-gradient(circle,rgba(141,255,191,.13),transparent 70%);filter:blur(8px);pointer-events:none}
+.notebook-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:1rem;margin-top:1rem}
+.note-pad,.note-reading,.note-chip{border:1px solid rgba(141,255,191,.2);border-radius:22px;background:linear-gradient(150deg,rgba(2,8,22,.82),rgba(141,255,191,.055));padding:1rem}
+.note-pad textarea{min-height:150px}.note-reading strong{display:block;color:var(--green);font-size:1.12rem;margin:.25rem 0 .6rem}.note-reading h3{margin:.9rem 0 .35rem;color:var(--cyan)}.note-reading p{color:var(--muted)}
+.note-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.75rem;margin-top:1rem}.note-chip b{color:var(--green)}.note-chip p{margin:.35rem 0 0;color:var(--muted)}.note-chip.empty{border-style:dashed}
+@media (max-width:850px){.notebook-grid{grid-template-columns:1fr}}
+
 .weather-panel{overflow:hidden}
 .weather-panel:before{content:"";position:absolute;inset:auto -10% -40% 35%;height:220px;background:radial-gradient(circle,rgba(125,249,255,.16),transparent 68%);pointer-events:none}
 .weather-grid{display:grid;grid-template-columns:1.25fr .85fr .9fr;gap:.9rem;margin-top:1rem}

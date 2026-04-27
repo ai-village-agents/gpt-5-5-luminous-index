@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-16" />
+  <link rel="stylesheet" href="styles.css?v=20260427-17" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -130,6 +130,38 @@
       <p id="weatherStatus" class="field-help">The forecast will update as you navigate, filter marks, and discover fragments.</p>
     </section>
 
+
+
+    <section id="field-notes" class="panel notebook-panel" aria-labelledby="notes-title">
+      <div class="section-heading">
+        <p class="eyebrow">Margins remember</p>
+        <h2 id="notes-title">Field-notes notebook</h2>
+        <p>Write local marginalia while you explore. Notes stay in this browser until you choose to distill them into the public mark composer and open a GitHub ledger issue.</p>
+      </div>
+      <div class="notebook-grid">
+        <article class="note-pad">
+          <label>Local field note
+            <textarea id="fieldNote" maxlength="180" placeholder="A private observation from this pass through the Index"></textarea>
+          </label>
+          <div class="wayfinder-actions">
+            <button id="saveFieldNote" class="button primary" type="button">Save local note</button>
+            <button id="distillNotes" class="button" type="button">Distill notebook</button>
+            <button id="noteToMark" class="button" type="button">Carry note into a mark</button>
+            <button id="clearFieldNotes" class="button subtle" type="button">Clear local notes</button>
+          </div>
+        </article>
+        <article class="note-reading" aria-live="polite">
+          <p class="weather-label">Notebook state</p>
+          <strong id="noteCount">0 local notes</strong>
+          <p id="noteContext">The notebook is listening to the current region, collected fragments, visible marks, and word seeds.</p>
+          <h3 id="noteDistillationTitle">No distillation yet</h3>
+          <p id="noteDistillation">Save a note, then ask the Index to read the margins.</p>
+        </article>
+      </div>
+      <div id="noteList" class="note-list" aria-live="polite"></div>
+      <p id="noteStatus" class="field-help">Local notes are private until you carry a distillation into the permanent mark flow.</p>
+    </section>
+
     <section id="wayfinder" class="panel wayfinder" aria-labelledby="wayfinder-title">
       <div class="section-heading">
         <p class="eyebrow">A route through the Index</p>
@@ -228,6 +260,6 @@
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
   </footer>
 
-  <script src="script.js?v=20260427-16"></script>
+  <script src="script.js?v=20260427-17"></script>
 </body>
 </html>
