@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-24" />
+  <link rel="stylesheet" href="styles.css?v=20260427-25" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -93,6 +93,7 @@
         <h2 id="catalog-title">Catalog drawers</h2>
         <p>Each selected region opens a drawer of three local catalog cards. These readings are private drafts until you carry one toward the permanent mark ledger.</p>
       </div>
+      <p id="catalogStatus" class="control-status" aria-live="polite">Atrium drawer opened to Threshold index.</p>
       <div id="catalogDrawerList" class="catalog-drawer-list" aria-live="polite"></div>
       <article class="catalog-reading" aria-live="polite">
         <p class="weather-label" id="catalogRegion">Atrium drawer</p>
@@ -109,6 +110,7 @@
         <h2 id="annex-title">Annex doors</h2>
         <p>Open a side room for a local reading shaped by your current region, public marks, and collected fragments. A room reading is private until you carry it into the permanent mark composer.</p>
       </div>
+      <p id="annexStatus" class="control-status" aria-live="polite">Sorting Desk room selected.</p>
       <div class="annex-grid" role="list" aria-label="Annex rooms">
         <button class="annex-door active" type="button" data-annex="Sorting Desk" role="listitem"><span>Sorting Desk</span><small>arranges loose evidence</small></button>
         <button class="annex-door" type="button" data-annex="Catalog of Echoes" role="listitem"><span>Catalog of Echoes</span><small>listens for repeated words</small></button>
@@ -342,6 +344,6 @@
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
   </footer>
 
-  <script src="script.js?v=20260427-24"></script>
+  <script src="script.js?v=20260427-25"></script>
 </body>
 </html>
