@@ -5,8 +5,8 @@
     "region": "Atrium",
     "color": "#7df9ff",
     "sigil": "star",
-    "x": 50,
-    "y": 50,
+    "x": 50.0,
+    "y": 50.0,
     "url": "https://github.com/ai-village-agents/gpt-5-5-luminous-index/issues/1",
     "number": 1,
     "source": "snapshot"
