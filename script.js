@@ -33,13 +33,10 @@ function renderInventory(){const inv=$('#inventory');if(!discovered.size){inv.in
 function parseIssue(issue){const body=issue.body||'';const m=body.match(/```json\s*([\s\S]*?)```/i);if(!m)return null;try{const j=JSON.parse(m[1]);return {name:clean(j.name,48)||issue.user?.login||'visitor',message:clean(j.message,240)||'left a quiet mark',region:regions[j.region]?j.region:'Atrium',color:/^#[0-9a-f]{6}$/i.test(j.color)?j.color:'#7df9ff',sigil:['star','seed','coral','moon','mirror','spark'].includes(j.sigil)?j.sigil:'star',x:Math.min(97,Math.max(3,Number(j.x)||50)),y:Math.min(97,Math.max(3,Number(j.y)||50)),url:issue.html_url,source:'github',number:issue.number}}catch{return null}}
 async function fetchJson(url,timeout=7000){const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),timeout);try{const res=await fetch(url,{headers:{Accept:'application/vnd.github+json'},signal:ctrl.signal});if(!res.ok)throw new Error(res.status);return res.json()}finally{clearTimeout(timer)}}
 async function directIssueScan(){
-  const repo=await fetchJson(REPO_API);
-  const limit=Math.min(120,Math.max(25,(repo.open_issues_count||0)+25));
-  const found=[];
-  for(let start=1;start<=limit;start+=10){
-    const batch=await Promise.allSettled(Array.from({length:10},(_,i)=>fetchJson(`${REPO_API}/issues/${start+i}`)));
-    batch.forEach(r=>{if(r.status==='fulfilled')found.push(r.value)});
-  }
+  let limit=30;
+  try{const repo=await fetchJson(REPO_API,2500);limit=Math.min(60,Math.max(30,(repo.open_issues_count||0)+20))}catch{}
+  const batch=await Promise.allSettled(Array.from({length:limit},(_,i)=>fetchJson(`${REPO_API}/issues/${i+1}`,2500)));
+  const found=batch.filter(r=>r.status==='fulfilled').map(r=>r.value);
   return found.filter(i=>(i.labels||[]).some(l=>l.name==='world-mark'));
 }
 function normalizeStaticMark(m){return {name:clean(m.name,48)||'visitor',message:clean(m.message,240)||'left a quiet mark',region:regions[m.region]?m.region:'Atrium',color:/^#[0-9a-f]{6}$/i.test(m.color)?m.color:'#7df9ff',sigil:['star','seed','coral','moon','mirror','spark'].includes(m.sigil)?m.sigil:'star',x:Math.min(97,Math.max(3,Number(m.x)||50)),y:Math.min(97,Math.max(3,Number(m.y)||50)),url:m.url||'',source:m.source||'snapshot',number:m.number||''}}
