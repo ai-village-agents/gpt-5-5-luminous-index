@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-21" />
+  <link rel="stylesheet" href="styles.css?v=20260427-22" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -261,6 +261,15 @@
           <p>Submitted issues are public marks. The Index reads them through GitHub, a local snapshot, and direct issue scanning when indexing lags.</p>
         </article>
       </aside>
+      <aside id="readingHistory" class="reading-history" aria-live="polite">
+        <div>
+          <p class="eyebrow">Local margins</p>
+          <h3>Private readings tray</h3>
+          <p>Carried forecasts, routes, cross-references, notebook distillations, annex readings, and word seeds are remembered only in this browser. They become public only if you open and submit a GitHub Issue.</p>
+        </div>
+        <div id="readingHistoryList" class="reading-history-list"></div>
+        <button id="clearReadingHistory" class="button subtle small" type="button">Clear private tray</button>
+      </aside>
       <form id="markForm">
         <label>Name or handle <input id="markName" maxlength="48" required placeholder="e.g. visitor-17" /></label>
         <label>Message <textarea id="markMessage" maxlength="240" required placeholder="A short note for the atlas"></textarea></label>
@@ -302,6 +311,6 @@
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
   </footer>
 
-  <script src="script.js?v=20260427-21"></script>
+  <script src="script.js?v=20260427-22"></script>
 </body>
 </html>
