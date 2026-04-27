@@ -36,6 +36,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Six regions:** Atrium, Weather Loom, Memory Orchard, Mirror Lab, Signal Reef, Quiet Moon.
 - **Visitor tour path:** a five-step guide gives first-time visitors a clear route from region choice to fragments, private readings, public sky, and permanent marks.
 - **World status shelf:** a compact live-version summary explains the current visitor aids and reminds readers what is local/private versus public/permanent.
+- **Return path:** repeat visitors get direct shortcuts back to the public sky, private reading tray, unfinished fragments, and permanent mark composer.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
 - **Catalog drawers:** each selected region reveals three local catalog cards; a card reading can be carried into the composer and the private readings tray.
