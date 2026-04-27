@@ -36,6 +36,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Six regions:** Atrium, Weather Loom, Memory Orchard, Mirror Lab, Signal Reef, Quiet Moon.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Cross-reference desk:** two or more collected fragments unlock a local synthesis that can be carried into the mark composer and made permanent through the issue ledger.
+- **Annex doors:** side rooms (Sorting Desk, Catalog of Echoes, Moon Annex, Signal Tide Room) generate region-aware readings that can become mark drafts.
 - **Field-notes notebook:** visitors can save private local notes, distill them with the current region/fragments/weather/word seeds, and carry the reading into the permanent mark composer.
 - **Wayfinding console:** generates a three-stop route from the current region, discovered fragments, and public marks; the route can become a mark draft.
 - **Atlas weather:** reads the selected region, local discovered fragments, visible marks, and word seeds as a living forecast that visitors can carry into the permanent mark composer.

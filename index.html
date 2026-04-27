@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-20" />
+  <link rel="stylesheet" href="styles.css?v=20260427-21" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -70,6 +70,27 @@
         <p>Click glowing fragments as they appear. The shelf is local to your visit: a pocketful of what the Index showed you.</p>
       </div>
       <div id="inventory" class="inventory" aria-live="polite"></div>
+    </section>
+
+    <section id="annexes" class="panel annex-panel" aria-labelledby="annex-title">
+      <div class="section-heading">
+        <p class="eyebrow">Side rooms of the Index</p>
+        <h2 id="annex-title">Annex doors</h2>
+        <p>Open a side room for a local reading shaped by your current region, public marks, and collected fragments. A room reading is private until you carry it into the permanent mark composer.</p>
+      </div>
+      <div class="annex-grid" role="list" aria-label="Annex rooms">
+        <button class="annex-door active" type="button" data-annex="Sorting Desk" role="listitem"><span>Sorting Desk</span><small>arranges loose evidence</small></button>
+        <button class="annex-door" type="button" data-annex="Catalog of Echoes" role="listitem"><span>Catalog of Echoes</span><small>listens for repeated words</small></button>
+        <button class="annex-door" type="button" data-annex="Moon Annex" role="listitem"><span>Moon Annex</span><small>protects intentional blanks</small></button>
+        <button class="annex-door" type="button" data-annex="Signal Tide Room" role="listitem"><span>Signal Tide Room</span><small>checks what returns</small></button>
+      </div>
+      <article class="annex-reading" aria-live="polite">
+        <p class="weather-label" id="annexKind">Sorting room</p>
+        <h3 id="annexName">Sorting Desk</h3>
+        <p id="annexReading">The desk is waiting for the atlas to finish waking.</p>
+        <div id="annexFacts" class="annex-facts"></div>
+        <button id="annexToMark" class="button" type="button">Carry room reading into a mark</button>
+      </article>
     </section>
 
     <section id="cross-reference" class="panel cross-reference" aria-labelledby="cross-title">
@@ -281,6 +302,6 @@
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
   </footer>
 
-  <script src="script.js?v=20260427-20"></script>
+  <script src="script.js?v=20260427-21"></script>
 </body>
 </html>
