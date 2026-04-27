@@ -51,6 +51,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Region sky mood:** the constellation background and lattice colors follow the selected region or active region filter, with a short weather-derived tint readout.
 - **Relationship lattice:** draws connections between visible marks that share a region, share a sigil, or land near each other; a visible legend explains the line colors.
 - **Observatory filters:** visitors can filter the sky by region and sigil.
+- **Observatory filter accessibility:** filter controls are tied to their live summary, sky, mark list, and census for clearer assistive-technology navigation.
 - **Word seed garden:** visible mark messages are distilled into clickable word seeds that can prefill the composer.
 - **Mark composer:** generates a prefilled GitHub Issue URL plus a visible/copyable issue body payload.
 - **Private readings tray:** carried local readings are saved only in the visitor’s browser, can be re-carried into the composer, and become public only if submitted to the GitHub ledger.

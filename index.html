@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-30" />
+  <link rel="stylesheet" href="styles.css?v=20260427-31" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -265,10 +265,10 @@
         <h2 id="constellation-title">Visitor constellation</h2>
         <p>Marks from GitHub Issues appear here. Click the sky to choose where your own sigil should land.</p>
       </div>
-      <div class="observatory" aria-label="Filter public marks">
-        <label>Region filter <select id="filterRegion"><option value="all">All regions</option></select></label>
-        <label>Sigil filter <select id="filterSigil"><option value="all">All sigils</option><option value="star">Star</option><option value="seed">Seed</option><option value="coral">Coral</option><option value="moon">Moon</option><option value="mirror">Mirror</option><option value="spark">Spark</option></select></label>
-        <button id="clearFilters" class="button subtle" type="button">Show all marks</button>
+      <div class="observatory" aria-label="Filter public marks" aria-describedby="filterSummary" aria-controls="sky markList constellationCensus">
+        <label>Region filter <select id="filterRegion" aria-describedby="filterSummary" aria-controls="sky markList constellationCensus"><option value="all">All regions</option></select></label>
+        <label>Sigil filter <select id="filterSigil" aria-describedby="filterSummary" aria-controls="sky markList constellationCensus"><option value="all">All sigils</option><option value="star">Star</option><option value="seed">Seed</option><option value="coral">Coral</option><option value="moon">Moon</option><option value="mirror">Mirror</option><option value="spark">Spark</option></select></label>
+        <button id="clearFilters" class="button subtle" type="button" aria-describedby="filterSummary" aria-controls="sky markList constellationCensus">Show all marks</button>
       </div>
       <p id="filterSummary" class="field-help" aria-live="polite">Showing every public mark.</p>
       <aside id="constellationCensus" class="constellation-census" aria-live="polite">
@@ -377,6 +377,6 @@
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
   </footer>
 
-  <script src="script.js?v=20260427-30"></script>
+  <script src="script.js?v=20260427-31"></script>
 </body>
 </html>
