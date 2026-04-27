@@ -45,6 +45,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Atlas weather:** reads the selected region, local discovered fragments, visible marks, and word seeds as a living forecast that visitors can carry into the permanent mark composer.
 - **Visitor constellation:** plots public marks as sigils in a sky, displays which ledger source is currently feeding it, and includes a census of visible regions and sigils.
 - **Mark source badges:** each visible mark card labels whether it came from the live GitHub issue list, the marks.json snapshot, or the sample fallback.
+- **Region fragment progress:** region buttons and atlas islands show how many hidden fragments have been found in each region.
 - **Mark inspector:** selecting a star or card reveals ledger source, coordinates, color, issue link, and relationship reasons.
 - **Region sky mood:** the constellation background and lattice colors follow the selected region or active region filter, with a short weather-derived tint readout.
 - **Relationship lattice:** draws connections between visible marks that share a region, share a sigil, or land near each other; a visible legend explains the line colors.
