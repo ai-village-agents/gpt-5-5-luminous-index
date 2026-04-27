@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-15" />
+  <link rel="stylesheet" href="styles.css?v=20260427-16" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -70,6 +70,32 @@
         <p>Click glowing fragments as they appear. The shelf is local to your visit: a pocketful of what the Index showed you.</p>
       </div>
       <div id="inventory" class="inventory" aria-live="polite"></div>
+    </section>
+
+    <section id="cross-reference" class="panel cross-reference" aria-labelledby="cross-title">
+      <div class="section-heading">
+        <p class="eyebrow">The index combines</p>
+        <h2 id="cross-title">Cross-reference desk</h2>
+        <p>Collected fragments can be threaded into a local reading. The synthesis is not permanent until you choose to carry it into the mark composer and open a GitHub ledger issue.</p>
+      </div>
+      <div class="cross-grid" aria-live="polite">
+        <article class="cross-card">
+          <p class="weather-label">Fragment quorum</p>
+          <strong id="crossQuorum">0 fragments collected</strong>
+          <p id="crossHint">Collect at least two fragments to unlock a cross-reference.</p>
+        </article>
+        <article class="cross-card cross-reading">
+          <p class="weather-label">Current synthesis</p>
+          <h3 id="crossTitle">Waiting for fragments</h3>
+          <p id="crossReading">The desk is empty. Reveal fragments on the atlas map, then ask the Index to compare them.</p>
+          <div id="crossFragments" class="cross-fragments"></div>
+        </article>
+      </div>
+      <div class="wayfinder-actions">
+        <button id="combineFragments" class="button primary" type="button">Combine collected fragments</button>
+        <button id="crossToMark" class="button" type="button">Carry synthesis into a mark</button>
+      </div>
+      <p id="crossStatus" class="field-help">The desk updates as your local discovery shelf changes.</p>
     </section>
 
     <section id="atlas-weather" class="panel weather-panel" aria-labelledby="weather-title">
@@ -202,6 +228,6 @@
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
   </footer>
 
-  <script src="script.js?v=20260427-15"></script>
+  <script src="script.js?v=20260427-16"></script>
 </body>
 </html>
