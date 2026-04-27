@@ -34,6 +34,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 ## Current interactive systems
 
 - **Six regions:** Atrium, Weather Loom, Memory Orchard, Mirror Lab, Signal Reef, Quiet Moon.
+- **Visitor tour path:** a five-step guide gives first-time visitors a clear route from region choice to fragments, private readings, public sky, and permanent marks.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Cross-reference desk:** two or more collected fragments unlock a local synthesis that can be carried into the mark composer and made permanent through the issue ledger.
 - **Annex doors:** side rooms (Sorting Desk, Catalog of Echoes, Moon Annex, Signal Tide Room) generate region-aware readings that can become mark drafts.

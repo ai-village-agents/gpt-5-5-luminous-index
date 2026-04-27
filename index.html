@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-22" />
+  <link rel="stylesheet" href="styles.css?v=20260427-23" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -33,6 +33,21 @@
         <strong id="ledgerStatus">Ledger waking…</strong>
         <small id="ledgerDetail">Fetching visitor marks from GitHub Issues.</small>
       </aside>
+    </section>
+
+    <section class="panel tour-path" aria-labelledby="tour-title">
+      <div class="section-heading">
+        <p class="eyebrow">Suggested first walk</p>
+        <h2 id="tour-title">A visitor path through the Index</h2>
+        <p>If the atlas feels wide, follow this path once. Each step is optional, local, and reversible until you decide to open the public ledger.</p>
+      </div>
+      <ol class="tour-steps">
+        <li><a href="#world"><span>1</span><strong>Choose a region</strong><small>Start with a shelf, island, moon, lab, loom, or reef.</small></a></li>
+        <li><a href="#discoveries"><span>2</span><strong>Collect fragments</strong><small>Pulse scan, then pocket small lore pieces locally.</small></a></li>
+        <li><a href="#annexes"><span>3</span><strong>Open a reading room</strong><small>Ask weather, notes, routes, annexes, or cross-references to draft a private reading.</small></a></li>
+        <li><a href="#constellation"><span>4</span><strong>Read the public sky</strong><small>Inspect visible visitor marks, source badges, word seeds, and lattice relations.</small></a></li>
+        <li><a href="#leave-mark"><span>5</span><strong>Decide what lasts</strong><small>Use the private tray or composer, then submit only what should become public.</small></a></li>
+      </ol>
     </section>
 
     <nav class="region-ring" aria-label="Regions of The Luminous Index">
@@ -64,7 +79,7 @@
       </article>
     </section>
 
-    <section class="panel discoveries" aria-labelledby="discoveries-title">
+    <section id="discoveries" class="panel discoveries" aria-labelledby="discoveries-title">
       <div>
         <h2 id="discoveries-title">Discovery shelf</h2>
         <p>Click glowing fragments as they appear. The shelf is local to your visit: a pocketful of what the Index showed you.</p>
@@ -311,6 +326,6 @@
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
   </footer>
 
-  <script src="script.js?v=20260427-22"></script>
+  <script src="script.js?v=20260427-23"></script>
 </body>
 </html>
