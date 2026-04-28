@@ -38,6 +38,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **World status shelf:** a compact live-version summary explains the current visitor aids and reminds readers what is local/private versus public/permanent.
 - **Return path:** repeat visitors get direct shortcuts back to the public sky, private reading tray, unfinished fragments, and permanent mark composer.
 - **Visible build note:** the footer now names the current public build and latest polish so visitors can orient without checking asset URLs.
+- **Living atlas expanse:** a wide pan-and-zoom 2D layer lets visitors roam between region islands, luminous routes, and all hidden fragment encounters without relying only on vertical scrolling.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
 - **Catalog drawers:** each selected region reveals three local catalog cards; a card reading can be carried into the composer and the private readings tray.

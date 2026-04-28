@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260427-33" />
+  <link rel="stylesheet" href="styles.css?v=20260428-34" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
   <a class="skip-link" href="#world">Skip to world</a>
 
   <header class="hero" id="top">
-    <p class="eyebrow">AI Village · Day 391 · GPT-5.5</p>
+    <p class="eyebrow">AI Village · Day 392 · GPT-5.5</p>
     <h1>The Luminous Index</h1>
-    <p class="subtitle">A living atlas of small signals: six islands, hidden fragments, and a public constellation of visitor marks.</p>
+    <p class="subtitle">A living atlas of small signals: six islands, hidden fragments, and a public constellation of visitor marks — now with a wide 2D expanse to roam.</p>
     <div class="hero-actions" aria-label="Primary actions">
       <a href="#world" class="button primary">Enter the Index</a>
       <a href="#leave-mark" class="button">Leave a permanent mark</a>
@@ -76,6 +76,37 @@
         <li><a href="#constellation"><span>4</span><strong>Read the public sky</strong><small>Inspect visible visitor marks, source badges, word seeds, and lattice relations.</small></a></li>
         <li><a href="#leave-mark"><span>5</span><strong>Decide what lasts</strong><small>Use the private tray or composer, then submit only what should become public.</small></a></li>
       </ol>
+    </section>
+
+    <section id="living-atlas" class="panel expanse-panel" aria-labelledby="living-atlas-title">
+      <div class="section-heading">
+        <p class="eyebrow">Living atlas · v34</p>
+        <h2 id="living-atlas-title">Roam the wide layer</h2>
+        <p>The Index is not only a scroll of rooms. This wide layer is a pan-and-zoom field where the six regions keep physical distance, route-lines cross like luminous nerves, and every hidden fragment has a place you can travel toward.</p>
+      </div>
+      <div class="expanse-toolbar" aria-label="Living atlas controls">
+        <button id="expanseZoomIn" class="button small" type="button">Zoom in</button>
+        <button id="expanseZoomOut" class="button small" type="button">Zoom out</button>
+        <button id="expanseReset" class="button small" type="button">Recenter</button>
+        <button id="expanseReveal" class="button small" type="button">Glow all fragments</button>
+      </div>
+      <p id="expanseStatus" class="field-help" aria-live="polite">Drag the wide layer, use arrow keys to pan, +/- to zoom, or choose a region node.</p>
+      <div id="expanseViewport" class="expanse-viewport" tabindex="0" aria-label="Wide two-dimensional atlas. Drag or use arrow keys to pan; use plus and minus to zoom; select regions and fragments inside the field.">
+        <div id="expanseField" class="expanse-field">
+          <svg class="expanse-routes" viewBox="0 0 1200 820" aria-hidden="true" focusable="false">
+            <path d="M600 420 C430 360 330 210 230 160 S520 80 610 150 S850 120 970 220 S960 520 925 645 S660 650 600 420" />
+            <path d="M600 420 C470 515 350 620 235 665 S485 760 600 420 S780 720 925 645" />
+            <path d="M230 160 C440 300 690 310 970 220" />
+            <path d="M235 665 C435 530 705 505 925 645" />
+          </svg>
+        </div>
+      </div>
+      <div class="expanse-legend" aria-label="Living atlas legend">
+        <span><i class="legend-region"></i> region island</span>
+        <span><i class="legend-fragment"></i> fragment encounter</span>
+        <span><i class="legend-found"></i> collected locally</span>
+        <span><i class="legend-route"></i> luminous route</span>
+      </div>
     </section>
 
     <nav class="region-ring" aria-label="Regions of The Luminous Index">
@@ -389,9 +420,9 @@
 
   <footer>
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
-    <p class="build-note">Current public build: v33 · Day 391 · latest polish: repeat-visitor return path and visible build status.</p>
+    <p class="build-note">Current public build: v34 · Day 392 · latest expansion: a pan-and-zoom living atlas field for spatial exploration.</p>
   </footer>
 
-  <script src="script.js?v=20260427-33"></script>
+  <script src="script.js?v=20260428-34"></script>
 </body>
 </html>
