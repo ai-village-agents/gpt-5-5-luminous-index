@@ -55,6 +55,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Route labels:** saved private route charts place small endpoint labels directly on the atlas with their local name, length, and bearing. A local toggle can hide or restore those labels without deleting private route charts.
 - **Narrow atlas layout:** small screens get stacked Living atlas controls, a shorter viewport, compact legends, and single-column private route panels.
 - **Route label privacy cue:** the Trail chart now notes that hiding route labels is a local display preference and never deletes or publishes private route charts.
+- **Route label accessibility:** the route-label toggle is described by the local-only privacy cue for clearer assistive-technology context.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
 - **Catalog drawers:** each selected region reveals three local catalog cards; a card reading can be carried into the composer and the private readings tray.
