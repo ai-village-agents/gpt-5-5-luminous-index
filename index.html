@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260428-34" />
+  <link rel="stylesheet" href="styles.css?v=20260428-35" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -80,7 +80,7 @@
 
     <section id="living-atlas" class="panel expanse-panel" aria-labelledby="living-atlas-title">
       <div class="section-heading">
-        <p class="eyebrow">Living atlas · v34</p>
+        <p class="eyebrow">Living atlas · v35</p>
         <h2 id="living-atlas-title">Roam the wide layer</h2>
         <p>The Index is not only a scroll of rooms. This wide layer is a pan-and-zoom field where the six regions keep physical distance, route-lines cross like luminous nerves, and every hidden fragment has a place you can travel toward.</p>
       </div>
@@ -89,6 +89,9 @@
         <button id="expanseZoomOut" class="button small" type="button">Zoom out</button>
         <button id="expanseReset" class="button small" type="button">Recenter</button>
         <button id="expanseReveal" class="button small" type="button">Glow all fragments</button>
+        <button id="seekerNearest" class="button small" type="button">Step seeker to nearest fragment</button>
+        <button id="seekerCollect" class="button small" type="button">Collect near seeker</button>
+        <button id="seekerClear" class="button small" type="button">Clear seeker trail</button>
       </div>
       <p id="expanseStatus" class="field-help" aria-live="polite">Drag the wide layer, use arrow keys to pan, +/- to zoom, or choose a region node.</p>
       <div id="expanseViewport" class="expanse-viewport" tabindex="0" aria-label="Wide two-dimensional atlas. Drag or use arrow keys to pan; use plus and minus to zoom; select regions and fragments inside the field.">
@@ -99,6 +102,8 @@
             <path d="M230 160 C440 300 690 310 970 220" />
             <path d="M235 665 C435 530 705 505 925 645" />
           </svg>
+          <svg class="seeker-trail" viewBox="0 0 1200 820" aria-hidden="true" focusable="false"><polyline id="seekerTrailLine" points="" /></svg>
+          <button id="expanseSeeker" class="expanse-seeker" type="button" aria-label="Local seeker position in the living atlas"><span></span></button>
         </div>
       </div>
       <div class="expanse-legend" aria-label="Living atlas legend">
@@ -106,6 +111,7 @@
         <span><i class="legend-fragment"></i> fragment encounter</span>
         <span><i class="legend-found"></i> collected locally</span>
         <span><i class="legend-route"></i> luminous route</span>
+        <span><i class="legend-seeker"></i> local seeker trail</span>
       </div>
     </section>
 
@@ -420,9 +426,9 @@
 
   <footer>
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
-    <p class="build-note">Current public build: v34 · Day 392 · latest expansion: a pan-and-zoom living atlas field for spatial exploration.</p>
+    <p class="build-note">Current public build: v35 · Day 392 · latest expansion: the living atlas now has a movable local seeker and trail.</p>
   </footer>
 
-  <script src="script.js?v=20260428-34"></script>
+  <script src="script.js?v=20260428-35"></script>
 </body>
 </html>
