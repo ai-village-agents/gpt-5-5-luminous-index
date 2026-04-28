@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260428-39" />
+  <link rel="stylesheet" href="styles.css?v=20260428-40" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -80,7 +80,7 @@
 
     <section id="living-atlas" class="panel expanse-panel" aria-labelledby="living-atlas-title">
       <div class="section-heading">
-        <p class="eyebrow">Living atlas · v39</p>
+        <p class="eyebrow">Living atlas · v40</p>
         <h2 id="living-atlas-title">Roam the wide layer</h2>
         <p>The Index is not only a scroll of rooms. This wide layer is a pan-and-zoom field where the six regions keep physical distance, route-lines cross like luminous nerves, and every hidden fragment has a place you can travel toward.</p>
       </div>
@@ -94,6 +94,7 @@
         <button id="seekerCollect" class="button small" type="button">Collect near seeker</button>
         <button id="seekerClear" class="button small" type="button">Clear seeker trail</button>
         <button id="seekerForget" class="button small" type="button">Forget trail memory</button>
+        <button id="trailChart" class="button small" type="button">Chart current trail</button>
       </div>
       <p id="expanseStatus" class="field-help" aria-live="polite">Drag the wide layer, use arrow keys to pan, +/- to zoom, or choose a region node.</p>
       <div class="expanse-instruments" aria-label="Living atlas instruments">
@@ -113,6 +114,7 @@
             <path d="M235 665 C435 530 705 505 925 645" />
           </svg>
           <svg class="portal-wake" viewBox="0 0 1200 820" aria-hidden="true" focusable="false"><polyline id="portalWakeLine" points="" /></svg>
+          <svg class="private-routes" viewBox="0 0 1200 820" aria-hidden="true" focusable="false"><g id="privateRouteLines"></g></svg>
           <svg class="seeker-trail" viewBox="0 0 1200 820" aria-hidden="true" focusable="false"><polyline id="seekerTrailLine" points="" /></svg>
           <button id="expanseSeeker" class="expanse-seeker" type="button" aria-label="Local seeker position in the living atlas"><span></span></button>
         </div>
@@ -125,7 +127,17 @@
         <span><i class="legend-portal"></i> atlas portal</span>
         <span><i class="legend-public-star"></i> public mark star</span>
         <span><i class="legend-memory"></i> private trail memory</span>
+        <span><i class="legend-private-route"></i> private route chart</span>
         <span><i class="legend-seeker"></i> local seeker trail</span>
+      </div>
+      <div class="trail-chart" aria-labelledby="trail-chart-title">
+        <div>
+          <p class="eyebrow">Private cartography</p>
+          <h3 id="trail-chart-title">Trail chart</h3>
+          <p>Turn the seeker’s recent path into local route-ribbons on the atlas. Route charts stay in this browser until forgotten; public ledger marks remain separate.</p>
+        </div>
+        <div id="trailRouteList" class="trail-route-list" aria-live="polite"></div>
+        <button id="trailRoutesForget" class="button small" type="button">Forget route charts</button>
       </div>
     </section>
 
@@ -440,9 +452,9 @@
 
   <footer>
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
-    <p class="build-note">Current public build: v39 · Day 392 · latest expansion: the local seeker trail now remembers its private path in this browser.</p>
+    <p class="build-note">Current public build: v40 · Day 392 · latest expansion: visitors can turn their private seeker trail into local route charts across the Living atlas.</p>
   </footer>
 
-  <script src="script.js?v=20260428-39"></script>
+  <script src="script.js?v=20260428-40"></script>
 </body>
 </html>
