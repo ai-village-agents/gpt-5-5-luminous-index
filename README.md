@@ -46,6 +46,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Private trail memory:** the local seeker position, trail, and last portal wake persist in the visitor’s own browser so return visits resume as a spatial journey, not a reset page.
 - **Private route charts:** visitors can chart their current seeker trail into local route-ribbons, revisit them later, or forget them without publishing anything.
 - **Seeker proximity whispers:** fragments, region islands, and public atlas stars glow when the local seeker draws near, with a live private readout of what is nearby.
+- **Nearby encounter log:** the seeker can “Listen nearby” to record private encounter cards from nearby fragments, public stars, or region islands, then optionally carry one into the composer.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
 - **Catalog drawers:** each selected region reveals three local catalog cards; a card reading can be carried into the composer and the private readings tray.
