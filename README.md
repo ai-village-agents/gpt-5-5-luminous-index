@@ -51,6 +51,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Ride atlas current:** visitors can let the local seeker drift along the active current, adding private trail movement without publishing anything.
 - **Route naming:** private trail charts can be named or renamed locally so visitors can make memorable paths without publishing them.
 - **Route-to-composer handoff:** the latest named private route can be copied into the mark composer and private readings tray as an optional public draft; nothing is published unless the visitor submits the GitHub Issue.
+- **Route bearings:** private route cards show walked length and overall bearing, making each saved local path read like a small atlas object.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
 - **Catalog drawers:** each selected region reveals three local catalog cards; a card reading can be carried into the composer and the private readings tray.
