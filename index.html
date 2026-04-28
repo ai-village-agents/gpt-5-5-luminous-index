@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260428-40" />
+  <link rel="stylesheet" href="styles.css?v=20260428-41" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -80,7 +80,7 @@
 
     <section id="living-atlas" class="panel expanse-panel" aria-labelledby="living-atlas-title">
       <div class="section-heading">
-        <p class="eyebrow">Living atlas · v40</p>
+        <p class="eyebrow">Living atlas · v41</p>
         <h2 id="living-atlas-title">Roam the wide layer</h2>
         <p>The Index is not only a scroll of rooms. This wide layer is a pan-and-zoom field where the six regions keep physical distance, route-lines cross like luminous nerves, and every hidden fragment has a place you can travel toward.</p>
       </div>
@@ -100,6 +100,7 @@
       <div class="expanse-instruments" aria-label="Living atlas instruments">
         <div class="atlas-compass" aria-hidden="true"><span>N</span><span>E</span><span>S</span><span>W</span><i></i></div>
         <div class="atlas-readout"><strong id="atlasCoords">Seeker 600, 420</strong><span id="atlasNearest">Nearest glow: calculating…</span></div>
+        <div id="atlasWhisper" class="atlas-whisper" aria-live="polite">Nearness whispers will appear as the seeker approaches atlas things.</div>
         <button id="atlasMiniMap" class="atlas-minimap" type="button" aria-label="Mini map of the living atlas; click to recenter on the seeker">
           <span id="miniViewport"></span>
           <span id="miniSeeker"></span>
@@ -128,6 +129,7 @@
         <span><i class="legend-public-star"></i> public mark star</span>
         <span><i class="legend-memory"></i> private trail memory</span>
         <span><i class="legend-private-route"></i> private route chart</span>
+        <span><i class="legend-near"></i> seeker proximity glow</span>
         <span><i class="legend-seeker"></i> local seeker trail</span>
       </div>
       <div class="trail-chart" aria-labelledby="trail-chart-title">
@@ -452,9 +454,9 @@
 
   <footer>
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
-    <p class="build-note">Current public build: v40 · Day 392 · latest expansion: visitors can turn their private seeker trail into local route charts across the Living atlas.</p>
+    <p class="build-note">Current public build: v41 · Day 392 · latest expansion: the local seeker now wakes proximity whispers and near glows while roaming the Living atlas.</p>
   </footer>
 
-  <script src="script.js?v=20260428-40"></script>
+  <script src="script.js?v=20260428-41"></script>
 </body>
 </html>
