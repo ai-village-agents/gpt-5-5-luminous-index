@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260428-42" />
+  <link rel="stylesheet" href="styles.css?v=20260428-43" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -80,7 +80,7 @@
 
     <section id="living-atlas" class="panel expanse-panel" aria-labelledby="living-atlas-title">
       <div class="section-heading">
-        <p class="eyebrow">Living atlas · v42</p>
+        <p class="eyebrow">Living atlas · v43</p>
         <h2 id="living-atlas-title">Roam the wide layer</h2>
         <p>The Index is not only a scroll of rooms. This wide layer is a pan-and-zoom field where the six regions keep physical distance, route-lines cross like luminous nerves, and every hidden fragment has a place you can travel toward.</p>
       </div>
@@ -96,12 +96,14 @@
         <button id="seekerForget" class="button small" type="button">Forget trail memory</button>
         <button id="trailChart" class="button small" type="button">Chart current trail</button>
         <button id="proximityListen" class="button small" type="button">Listen nearby</button>
+        <button id="atlasCurrentRead" class="button small" type="button">Read atlas current</button>
       </div>
       <p id="expanseStatus" class="field-help" aria-live="polite">Drag the wide layer, use arrow keys to pan, +/- to zoom, or choose a region node.</p>
       <div class="expanse-instruments" aria-label="Living atlas instruments">
         <div class="atlas-compass" aria-hidden="true"><span>N</span><span>E</span><span>S</span><span>W</span><i></i></div>
         <div class="atlas-readout"><strong id="atlasCoords">Seeker 600, 420</strong><span id="atlasNearest">Nearest glow: calculating…</span></div>
         <div id="atlasWhisper" class="atlas-whisper" aria-live="polite">Nearness whispers will appear as the seeker approaches atlas things.</div>
+        <div id="atlasCurrent" class="atlas-current" aria-live="polite">Atlas current: calculating…</div>
         <button id="atlasMiniMap" class="atlas-minimap" type="button" aria-label="Mini map of the living atlas; click to recenter on the seeker">
           <span id="miniViewport"></span>
           <span id="miniSeeker"></span>
@@ -109,6 +111,14 @@
       </div>
       <div id="expanseViewport" class="expanse-viewport" tabindex="0" aria-label="Wide two-dimensional atlas. Drag or use arrow keys to pan; use plus and minus to zoom; select regions and fragments inside the field.">
         <div id="expanseField" class="expanse-field">
+          <svg class="atlas-currents" viewBox="0 0 1200 820" aria-hidden="true" focusable="false">
+            <path data-current="Atrium" d="M155 515 C330 430 480 450 600 420 S815 385 1045 505" />
+            <path data-current="Weather Loom" d="M160 170 C310 240 455 210 610 150 S865 130 1030 260" />
+            <path data-current="Memory Orchard" d="M1000 92 C1045 210 1030 330 970 420 S855 575 760 730" />
+            <path data-current="Mirror Lab" d="M130 710 C245 600 330 530 455 515 S610 560 760 680" />
+            <path data-current="Signal Reef" d="M1090 585 C955 535 855 560 760 650 S540 760 360 710" />
+            <path data-current="Quiet Moon" d="M385 90 C500 125 565 110 610 150 S710 230 815 210" />
+          </svg>
           <svg class="expanse-routes" viewBox="0 0 1200 820" aria-hidden="true" focusable="false">
             <path d="M600 420 C430 360 330 210 230 160 S520 80 610 150 S850 120 970 220 S960 520 925 645 S660 650 600 420" />
             <path d="M600 420 C470 515 350 620 235 665 S485 760 600 420 S780 720 925 645" />
@@ -131,7 +141,17 @@
         <span><i class="legend-memory"></i> private trail memory</span>
         <span><i class="legend-private-route"></i> private route chart</span>
         <span><i class="legend-near"></i> seeker proximity glow</span>
+        <span><i class="legend-current"></i> atlas current</span>
         <span><i class="legend-seeker"></i> local seeker trail</span>
+      </div>
+      <div class="current-log" aria-labelledby="current-log-title">
+        <div>
+          <p class="eyebrow">Local current desk</p>
+          <h3 id="current-log-title">Atlas current</h3>
+          <p>The wide layer has soft currents between regions. Move the seeker, then read the current to make a private directional prompt you can carry into the composer.</p>
+        </div>
+        <div id="atlasCurrentPanel" class="current-card" aria-live="polite"></div>
+        <button id="atlasCurrentCarry" class="button small" type="button">Carry current to composer</button>
       </div>
       <div class="proximity-log" aria-labelledby="proximity-log-title">
         <div>
@@ -464,9 +484,9 @@
 
   <footer>
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
-    <p class="build-note">Current public build: v42 · Day 392 · latest expansion: visitors can listen to nearby atlas things and keep a private encounter log.</p>
+    <p class="build-note">Current public build: v43 · Day 392 · latest expansion: the Living atlas now has readable spatial currents that respond to the seeker.</p>
   </footer>
 
-  <script src="script.js?v=20260428-42"></script>
+  <script src="script.js?v=20260428-43"></script>
 </body>
 </html>
