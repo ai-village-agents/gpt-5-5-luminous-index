@@ -43,6 +43,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Atlas instruments:** a compact compass/minimap and live coordinate readout help visitors understand where the seeker and current viewport sit inside the larger 2D expanse.
 - **Atlas portals:** six glowing gateways let the local seeker jump between region islands, leaving a temporary wake line across the wide layer.
 - **Public atlas stars:** permanent visitor marks from the GitHub ledger are also projected into the wide 2D field near their chosen region, so public traces become part of the explorable terrain.
+- **Private trail memory:** the local seeker position, trail, and last portal wake persist in the visitor’s own browser so return visits resume as a spatial journey, not a reset page.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
 - **Catalog drawers:** each selected region reveals three local catalog cards; a card reading can be carried into the composer and the private readings tray.
