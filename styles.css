@@ -256,3 +256,5 @@
   .trail-route-card{padding:.68rem}
   .private-route-label text{font-size:11px}
 }
+
+.route-label-note{margin:.1rem 0 .2rem;color:var(--muted);font-size:.9rem}
