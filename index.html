@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260429-55" />
+  <link rel="stylesheet" href="styles.css?v=20260429-56" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -80,7 +80,7 @@
 
     <section id="living-atlas" class="panel expanse-panel" aria-labelledby="living-atlas-title">
       <div class="section-heading">
-        <p class="eyebrow">Living atlas · v55</p>
+        <p class="eyebrow">Living atlas · v56</p>
         <h2 id="living-atlas-title">Roam the wide layer</h2>
         <p>The Index is not only a scroll of rooms. This wide layer is a pan-and-zoom field where the six regions keep physical distance, route-lines cross like luminous nerves, and every hidden fragment has a place you can travel toward.</p>
       </div>
@@ -429,8 +429,11 @@
         <dl id="inspectorFacts" class="inspector-facts"></dl>
         <div id="inspectorLinks" class="inspector-links"></div>
         <div class="inspector-actions">
-          <button id="inspectorCarry" class="button small" type="button" disabled>Carry as private star echo</button>
-          <small>This copies the selected public star into your private tray and composer only; it does not create a new ledger mark.</small>
+          <div class="inspector-action-row">
+            <button id="inspectorCarry" class="button small" type="button" disabled>Carry as private star echo</button>
+            <button id="inspectorTrace" class="button small subtle" type="button" disabled>Trace private path to star</button>
+          </div>
+          <small>These actions copy or trace the selected public star only in this browser; they do not create a new ledger mark.</small>
         </div>
         <button id="clearInspector" class="button subtle small" type="button">Clear selection</button>
       </aside>
@@ -509,9 +512,9 @@
 
   <footer>
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
-    <p class="build-note">Current public build: v55 · Day 393 · latest expansion: selected public stars can now be carried into a private reading draft before any new ledger mark is submitted.</p>
+    <p class="build-note">Current public build: v56 · Day 393 · latest expansion: selected public stars can now be traced as private Living-atlas paths or carried into local reading drafts before any new ledger mark is submitted.</p>
   </footer>
 
-  <script src="script.js?v=20260429-55"></script>
+  <script src="script.js?v=20260429-56"></script>
 </body>
 </html>
