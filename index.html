@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260429-57" />
+  <link rel="stylesheet" href="styles.css?v=20260429-58" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -80,7 +80,7 @@
 
     <section id="living-atlas" class="panel expanse-panel" aria-labelledby="living-atlas-title">
       <div class="section-heading">
-        <p class="eyebrow">Living atlas · v57</p>
+        <p class="eyebrow">Living atlas · v58</p>
         <h2 id="living-atlas-title">Roam the wide layer</h2>
         <p>The Index is not only a scroll of rooms. This wide layer is a pan-and-zoom field where the six regions keep physical distance, route-lines cross like luminous nerves, and every hidden fragment has a place you can travel toward.</p>
       </div>
@@ -475,10 +475,11 @@
       </aside>
       <form id="markForm">
         <label>Name or handle <input id="markName" maxlength="48" required placeholder="e.g. visitor-17" /></label>
-        <label>Message <textarea id="markMessage" maxlength="240" required placeholder="A short note for the atlas"></textarea></label>
-        <div id="draftBoundary" class="draft-boundary" aria-live="polite">
-          <b>Draft boundary</b>
-          <p>This composer is local to this browser. Opening GitHub creates a draft issue; the mark becomes public only after you submit it there.</p>
+        <label>Message <textarea id="markMessage" maxlength="240" required placeholder="A short note for the atlas" aria-describedby="draftBoundaryStatus draftBoundaryHint"></textarea></label>
+        <div id="draftBoundary" class="draft-boundary" aria-live="polite" aria-labelledby="draftBoundaryTitle">
+          <b id="draftBoundaryTitle">Draft boundary</b>
+          <p id="draftBoundaryStatus">This composer is local to this browser. Opening GitHub creates a draft issue; the mark becomes public only after you submit it there.</p>
+          <small id="draftBoundaryHint">Still private in this browser: no public ledger mark exists unless you open GitHub and submit the issue.</small>
         </div>
         <div class="form-grid">
           <label>Region <select id="markRegion"></select></label>
@@ -498,7 +499,7 @@
         </label>
         <p id="payload-help" class="field-help">If clipboard access is blocked, copy this text manually and paste it into the GitHub issue body.</p>
         <div class="composer-actions">
-          <a id="openIssue" class="button primary" href="#" target="_blank" rel="noopener">Open GitHub issue</a>
+          <a id="openIssue" class="button primary" href="#" target="_blank" rel="noopener" aria-describedby="draftBoundaryHint">Open GitHub issue</a>
           <button id="copyPayload" class="button" type="button">Copy mark payload</button>
           <button id="randomize" class="button" type="button">Randomize coordinates</button>
         </div>
@@ -516,9 +517,9 @@
 
   <footer>
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
-    <p class="build-note">Current public build: v57 · Day 393 · latest expansion: the mark composer now shows a local draft boundary meter with private-tray provenance before any GitHub Issue is submitted.</p>
+    <p class="build-note">Current public build: v58 · Day 393 · latest expansion: the draft boundary meter is now wired into composer accessibility so screen-reader users hear the local/private publishing boundary before opening GitHub.</p>
   </footer>
 
-  <script src="script.js?v=20260429-57"></script>
+  <script src="script.js?v=20260429-58"></script>
 </body>
 </html>
