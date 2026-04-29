@@ -63,6 +63,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Draft boundary meter:** the mark composer shows local provenance, length, region/sigil, and a reminder that the draft is private until a GitHub Issue is submitted.
 - **Draft boundary accessibility:** the composer message field and GitHub issue button explicitly reference the private/public boundary meter for assistive technology.
 - **Local draft shelfmarks:** the draft boundary meter assigns a changing private Index shelfmark to the current composer text before publication.
+- **Copyable local shelfmarks:** the private boundary meter can copy the current shelfmark without opening GitHub or publishing a ledger mark.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
 - **Catalog drawers:** each selected region reveals three local catalog cards; a card reading can be carried into the composer and the private readings tray.
