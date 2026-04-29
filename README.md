@@ -69,6 +69,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Shelfmark meaning key:** each private draft shelfmark now explains its region, sigil, typed-length, and local fingerprint parts before anything is published.
 - **Copyable shelfmark chip:** the private draft shelfmark code can now be clicked directly as a copy target, in addition to the labeled copy button.
 - **Shelfmark copy affordance:** the chip now has a larger hit area and an inline hint that copying remains a private draft action.
+- **Shelfmark copied pulse:** after a local shelfmark copy, the private chip briefly shows a “✓ copied” pulse in place without publishing anything.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
 - **Catalog drawers:** each selected region reveals three local catalog cards; a card reading can be carried into the composer and the private readings tray.
