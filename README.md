@@ -78,6 +78,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Draft-boundary local explainer:** a compact disclosure explains that composer state, shelfmarks, copy trails, and private readings stay local until a GitHub ledger issue is submitted.
 - **Draft-boundary local ingredients:** the composer now shows compact browser-only ingredient chips for the current draft, such as direct field state, region, sigil, private routes, fragments, and shelfmark-copy trail count.
 - **Inline distillation confirmation:** after `Distill to tray`, the draft boundary itself echoes that the local ingredients moved into the private tray and composer without creating a public ledger mark.
+- **Focused distillation confirmation:** the distilled boundary stays in view, the completed local button receives focus, and the inline echo is announced as a live local-only status.
 - **Private ingredient distillation:** a `Distill to tray` draft-boundary action turns the current browser-only ingredient mix into a local private reading and composer draft without creating a public ledger mark.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
