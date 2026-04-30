@@ -74,6 +74,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Clear local shelfmark trail:** visitors can erase the private shelfmark copy trail in this browser without touching public marks.
 - **Shelfmark trail accessibility:** clearing the private shelfmark copy trail announces the change and returns focus to the current shelfmark chip.
 - **Region-tinted shelfmark trail:** recent private shelfmark copies carry subtle region color accents while remaining browser-local.
+- **Small-screen shelfmark trail polish:** recent private shelfmark chips, clear controls, and the local-only note wrap cleanly on narrow screens.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
 - **Catalog drawers:** each selected region reveals three local catalog cards; a card reading can be carried into the composer and the private readings tray.
