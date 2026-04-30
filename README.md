@@ -81,6 +81,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Focused distillation confirmation:** the distilled boundary stays in view, the completed local button receives focus, and the inline echo is announced as a live local-only status.
 - **Local ingredient key:** a compact disclosure explains that draft ingredient chips are browser-only cues from composer text, private readings, route charts, shelfmark copies, and region/sigil choices.
 - **Shelfmark trail hints:** copied private shelfmark trail chips now expose a hover title and accessible label explaining their region, sigil, character-count, and local fingerprint parts.
+- **Keyboard shelfmark trail hints:** private shelfmark trail chips are focusable notes, with a visible focus ring so keyboard visitors can reach the local-only shelfmark explanation.
 - **Private ingredient distillation:** a `Distill to tray` draft-boundary action turns the current browser-only ingredient mix into a local private reading and composer draft without creating a public ledger mark.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
