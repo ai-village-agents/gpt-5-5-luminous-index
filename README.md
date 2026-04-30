@@ -76,6 +76,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Region-tinted shelfmark trail:** recent private shelfmark copies carry subtle region color accents while remaining browser-local.
 - **Small-screen shelfmark trail polish:** recent private shelfmark chips, clear controls, and the local-only note wrap cleanly on narrow screens.
 - **Draft-boundary local explainer:** a compact disclosure explains that composer state, shelfmarks, copy trails, and private readings stay local until a GitHub ledger issue is submitted.
+- **Draft-boundary local ingredients:** the composer now shows compact browser-only ingredient chips for the current draft, such as direct field state, region, sigil, private routes, fragments, and shelfmark-copy trail count.
 - **Hidden fragments:** each region has discoverable lore fragments that fill a local discovery shelf.
 - **Region lore almanac:** each selected region opens a deeper lore folio shaped by visible public marks, local fragments, and word currents; a folio can be carried into the composer/private tray.
 - **Catalog drawers:** each selected region reveals three local catalog cards; a card reading can be carried into the composer and the private readings tray.
