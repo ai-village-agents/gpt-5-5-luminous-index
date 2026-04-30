@@ -85,6 +85,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Connected shelfmark trail hint:** the visible copy-again hint is now explicitly local and referenced by the recopyable private shelfmark trail chips for assistive reading.
 - **Clear-trail locality cue:** the private shelfmark trail clear button now names that it clears only this browser’s local copy history and leaves public ledger marks untouched.
 - **Empty trail starter cue:** when no private shelfmark copy trail exists, the draft boundary now says copying the local shelfmark above starts a browser-only trail.
+- **Shelfmark copy action trail cue:** the shelfmark chip/copy instruction now says copying starts or updates this browser’s private local trail without opening a public ledger mark.
 - **Visible shelfmark trail copy hint:** the private shelfmark trail title now states that recent local shelfmarks can be copied again with click, Enter, or Space, while staying out of the public ledger.
 - **Recopyable shelfmark trail chips:** recent private shelfmark trail chips are now buttons, letting visitors click, Enter, or Space to copy a local shelfmark again without creating a public ledger mark.
 - **Private ingredient distillation:** a `Distill to tray` draft-boundary action turns the current browser-only ingredient mix into a local private reading and composer draft without creating a public ledger mark.
