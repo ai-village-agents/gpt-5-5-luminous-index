@@ -114,6 +114,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Nearby forget boundary label:** the nearby encounter forget control and status now state that only browser-local encounter cards are cleared; public GitHub Issue stars and ledger marks are unchanged.
 - **Nearby cleared-local summary:** after forgetting nearby encounters, the local summary notes the browser-only clear time and confirms public GitHub Issue stars and public ledger marks were not changed.
 - **Nearby cleared-empty cue:** the empty nearby encounter list now echoes that cleared cards were browser-only and public ledger marks remain unchanged.
+- **Nearby cleared-empty timestamp:** the empty nearby encounter list now repeats the local clear time while confirming public GitHub Issue stars and public ledger marks remain unchanged.
 - **Visible shelfmark trail copy hint:** the private shelfmark trail title now states that recent local shelfmarks can be copied again with click, Enter, or Space, while staying out of the public ledger.
 - **Recopyable shelfmark trail chips:** recent private shelfmark trail chips are now buttons, letting visitors click, Enter, or Space to copy a local shelfmark again without creating a public ledger mark.
 - **Private ingredient distillation:** a `Distill to tray` draft-boundary action turns the current browser-only ingredient mix into a local private reading and composer draft without creating a public ledger mark.
