@@ -92,6 +92,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Newest public issue inspector cue:** inspecting the newest public GitHub Issue mark now also identifies it as the newest public issue in the ledger facts panel.
 - **Accessible public issue badges:** latest/newest public issue badges now include matching accessible labels and hover titles.
 - **Newest public issue summary cue:** the public-sky filter summary now names the newest visible public GitHub Issue mark.
+- **Hidden newest issue filter cue:** filtered public-sky views now say when the newest public GitHub Issue mark is hidden by the active filters.
 - **Visible shelfmark trail copy hint:** the private shelfmark trail title now states that recent local shelfmarks can be copied again with click, Enter, or Space, while staying out of the public ledger.
 - **Recopyable shelfmark trail chips:** recent private shelfmark trail chips are now buttons, letting visitors click, Enter, or Space to copy a local shelfmark again without creating a public ledger mark.
 - **Private ingredient distillation:** a `Distill to tray` draft-boundary action turns the current browser-only ingredient mix into a local private reading and composer draft without creating a public ledger mark.
