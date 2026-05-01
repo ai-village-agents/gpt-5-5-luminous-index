@@ -95,6 +95,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Hidden newest issue filter cue:** filtered public-sky views now say when the newest public GitHub Issue mark is hidden by the active filters.
 - **Public filter boundary note:** public-sky controls now state that filtering only changes visible public GitHub Issue marks and does not publish or alter browser-local shelfmarks, routes, readings, or drafts.
 - **Filtered selection inspector guidance:** if active filters hide the selected public mark, the inspector now explains why the selection cleared and confirms private local trails and drafts were unchanged.
+- **Filtered selection recovery:** the filtered-selection inspector now offers a local Show all marks recovery button that reveals the hidden public star without publishing or changing private local trails and drafts.
 - **Visible shelfmark trail copy hint:** the private shelfmark trail title now states that recent local shelfmarks can be copied again with click, Enter, or Space, while staying out of the public ledger.
 - **Recopyable shelfmark trail chips:** recent private shelfmark trail chips are now buttons, letting visitors click, Enter, or Space to copy a local shelfmark again without creating a public ledger mark.
 - **Private ingredient distillation:** a `Distill to tray` draft-boundary action turns the current browser-only ingredient mix into a local private reading and composer draft without creating a public ledger mark.
