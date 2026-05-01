@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260501-98" />
+  <link rel="stylesheet" href="styles.css?v=20260501-99" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -80,7 +80,7 @@
 
     <section id="living-atlas" class="panel expanse-panel" aria-labelledby="living-atlas-title">
       <div class="section-heading">
-        <p class="eyebrow">Living atlas · v98</p>
+        <p class="eyebrow">Living atlas · v99</p>
         <h2 id="living-atlas-title">Roam the wide layer</h2>
         <p>The Index is not only a scroll of rooms. This wide layer is a pan-and-zoom field where the six regions keep physical distance, route-lines cross like luminous nerves, and every hidden fragment has a place you can travel toward.</p>
       </div>
@@ -399,6 +399,7 @@
         <label>Region filter <select id="filterRegion" aria-describedby="filterSummary filterBoundaryNote filterLensNote filterRecoveryStatus" aria-controls="sky markList constellationCensus"><option value="all">All regions</option></select></label>
         <label>Sigil filter <select id="filterSigil" aria-describedby="filterSummary filterBoundaryNote filterLensNote filterRecoveryStatus" aria-controls="sky markList constellationCensus"><option value="all">All sigils</option><option value="star">Star</option><option value="seed">Seed</option><option value="coral">Coral</option><option value="moon">Moon</option><option value="mirror">Mirror</option><option value="spark">Spark</option></select></label>
         <button id="clearFilters" class="button subtle" type="button" aria-describedby="filterSummary filterBoundaryNote filterLensNote filterRecoveryStatus" aria-controls="sky markList constellationCensus">Show all marks</button>
+        <button id="focusNewestIssue" class="button subtle" type="button" aria-describedby="filterSummary filterBoundaryNote filterLensNote filterRecoveryStatus" aria-controls="sky markList inspectorTitle inspectorMessage inspectorFacts inspectorLinks constellationCensus">Focus newest issue</button>
       </div>
       <p id="filterSummary" class="field-help" aria-live="polite">Showing every public mark.</p>
       <p id="filterBoundaryNote" class="field-help">These filters only change which public GitHub Issue marks are visible here; browser-local shelfmarks, routes, readings, and draft ingredients stay private unless you deliberately submit a ledger issue.</p>
@@ -520,9 +521,9 @@
 
   <footer>
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
-    <p class="build-note">Current public build: v98 · Day 395 · latest expansion: the public-sky filters now include a live lens note that names the active public view while confirming browser-local trails, readings, shelfmarks, and drafts are unchanged.</p>
+    <p class="build-note">Current public build: v99 · Day 395 · latest expansion: the public-sky filters now include a Focus newest issue control that resets only the public lens and selects the newest public ledger mark while browser-local trails, readings, shelfmarks, and drafts stay unchanged.</p>
   </footer>
 
-  <script src="script.js?v=20260501-98"></script>
+  <script src="script.js?v=20260501-99"></script>
 </body>
 </html>
