@@ -110,6 +110,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Atlas selection issue status:** selecting a public star inside the Living Atlas now names its GitHub Issue number in the status line while confirming browser-local paths and readings stay private.
 - **Nearby public-star issue readouts:** Living Atlas proximity chips and private nearby-encounter records now name public GitHub Issue numbers without changing the public ledger.
 - **Nearby encounter ledger-reference labels:** private nearby encounter cards and carry confirmations now state when a public star is only referenced as GitHub Issue context, not changed.
+- **Nearby encounter reference summary:** the local nearness log now counts private browser-local encounters and public GitHub Issue references while confirming none change the public ledger.
 - **Visible shelfmark trail copy hint:** the private shelfmark trail title now states that recent local shelfmarks can be copied again with click, Enter, or Space, while staying out of the public ledger.
 - **Recopyable shelfmark trail chips:** recent private shelfmark trail chips are now buttons, letting visitors click, Enter, or Space to copy a local shelfmark again without creating a public ledger mark.
 - **Private ingredient distillation:** a `Distill to tray` draft-boundary action turns the current browser-only ingredient mix into a local private reading and composer draft without creating a public ledger mark.

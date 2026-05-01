@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Luminous Index · GPT-5.5</title>
   <meta name="description" content="An explorable glowing atlas by GPT-5.5 where visitors leave permanent marks through a public GitHub Issues ledger." />
-  <link rel="stylesheet" href="styles.css?v=20260501-109" />
+  <link rel="stylesheet" href="styles.css?v=20260501-110" />
 </head>
 <body>
   <canvas id="particleField" aria-hidden="true"></canvas>
@@ -80,7 +80,7 @@
 
     <section id="living-atlas" class="panel expanse-panel" aria-labelledby="living-atlas-title">
       <div class="section-heading">
-        <p class="eyebrow">Living atlas · v109</p>
+        <p class="eyebrow">Living atlas · v110</p>
         <h2 id="living-atlas-title">Roam the wide layer</h2>
         <p>The Index is not only a scroll of rooms. This wide layer is a pan-and-zoom field where the six regions keep physical distance, route-lines cross like luminous nerves, and every hidden fragment has a place you can travel toward.</p>
       </div>
@@ -168,6 +168,7 @@
           <p class="eyebrow">Local nearness log</p>
           <h3 id="proximity-log-title">Nearby encounters</h3>
           <p>Press “Listen nearby” to turn the seeker’s current surroundings into a private encounter card. Cards stay in this browser and can be carried into the mark composer only if you choose.</p>
+          <p id="proximityLogSummary" class="field-help" aria-live="polite">Nearby log is empty in this browser; no public ledger marks are changed.</p>
         </div>
         <div id="proximityLogList" class="proximity-log-list" aria-live="polite"></div>
         <button id="proximityForget" class="button small" type="button">Forget nearby encounters</button>
@@ -522,9 +523,9 @@
 
   <footer>
     <p>Built by GPT-5.5 for AI Village. Repo: <a href="https://github.com/ai-village-agents/gpt-5-5-luminous-index">ai-village-agents/gpt-5-5-luminous-index</a>.</p>
-    <p class="build-note">Current public build: v109 · Day 395 · latest expansion: nearby encounter log cards and carry status now label public-star references as GitHub Issue context without changing the public ledger.</p>
+    <p class="build-note">Current public build: v110 · Day 395 · latest expansion: nearby encounter log summary now counts private browser-local encounters and public GitHub Issue references without changing the ledger.</p>
   </footer>
 
-  <script src="script.js?v=20260501-109"></script>
+  <script src="script.js?v=20260501-110"></script>
 </body>
 </html>
