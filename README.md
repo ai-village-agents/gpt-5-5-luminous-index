@@ -105,6 +105,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Newest issue readiness note:** a live note now says when the newest-issue focus control is waiting for the public ledger or ready to focus the newest public issue, while confirming the action only affects the public sky lens.
 - **Newest issue target details:** the readiness note and accessible focus label now name the newest issue’s public region and sigil before visitors reset the public-sky lens.
 - **Newest issue focus confirmation:** after focusing the newest public issue, the live confirmation now repeats its public region and sigil while confirming browser-local trails, readings, shelfmarks, and drafts stay unchanged.
+- **Inspector issue number fact:** selected public stars now show their GitHub Issue number as a dedicated inspector fact, keeping public ledger identity clear without touching browser-local trails or drafts.
 - **Visible shelfmark trail copy hint:** the private shelfmark trail title now states that recent local shelfmarks can be copied again with click, Enter, or Space, while staying out of the public ledger.
 - **Recopyable shelfmark trail chips:** recent private shelfmark trail chips are now buttons, letting visitors click, Enter, or Space to copy a local shelfmark again without creating a public ledger mark.
 - **Private ingredient distillation:** a `Distill to tray` draft-boundary action turns the current browser-only ingredient mix into a local private reading and composer draft without creating a public ledger mark.
