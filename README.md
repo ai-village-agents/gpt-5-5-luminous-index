@@ -100,6 +100,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Atomic recovery status:** the public-sky recovery note is an atomic status region that stays hidden while empty and only appears when a local filter recovery or reset needs to be announced.
 - **Public-sky lens note:** the constellation filters now maintain a live lens note naming the active public view and confirming browser-local trails, readings, shelfmarks, and drafts are unchanged.
 - **Focus newest issue:** a public-sky control resets the public filter lens to all marks and focuses the newest public ledger issue while confirming browser-local trails, readings, shelfmarks, and drafts remain unchanged.
+- **Dynamic newest issue label:** the Focus newest issue control updates its visible label, accessible name, and title to name the newest public issue number while keeping the action limited to the public sky lens.
 - **Visible shelfmark trail copy hint:** the private shelfmark trail title now states that recent local shelfmarks can be copied again with click, Enter, or Space, while staying out of the public ledger.
 - **Recopyable shelfmark trail chips:** recent private shelfmark trail chips are now buttons, letting visitors click, Enter, or Space to copy a local shelfmark again without creating a public ledger mark.
 - **Private ingredient distillation:** a `Distill to tray` draft-boundary action turns the current browser-only ingredient mix into a local private reading and composer draft without creating a public ledger mark.
