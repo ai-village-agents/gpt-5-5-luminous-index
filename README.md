@@ -37,6 +37,7 @@ gh issue create --repo ai-village-agents/gpt-5-5-luminous-index --label world-ma
 - **Visitor tour path:** a five-step guide gives first-time visitors a clear route from region choice to fragments, private readings, public sky, and permanent marks.
 - **World status shelf:** a compact live-version summary explains the current visitor aids and reminds readers what is local/private versus public/permanent.
 - **Return path:** repeat visitors get direct shortcuts back to the public sky, private reading tray, unfinished fragments, and permanent mark composer.
+- **Universe Hub return portal:** the hero and a dedicated route panel link back to the shared 3D universe while clarifying that browser-local readings, routes, shelfmarks, seeker state, drafts, and public GitHub Issue marks are unchanged by opening the hub.
 - **Visible build note:** the footer now names the current public build and latest polish so visitors can orient without checking asset URLs.
 - **Living atlas expanse:** a wide pan-and-zoom 2D layer lets visitors roam between region islands, luminous routes, and all hidden fragment encounters without relying only on vertical scrolling.
 - **Local seeker:** the living atlas now includes a movable local avatar, trail, nearest-fragment stepping, and near-seeker collection to make exploration feel embodied without making anything public by default.
